@@ -1,0 +1,35 @@
+.inner-child {
+  text-align: right;
+}
+
+/* Matches an element that has the classes .child and .inner-child */
+.child.inner-child {
+  border: 4px solid black;
+  border-radius: 8px;
+}
+
+.child {
+  border: 4px solid purple;
+  color: blue;
+  text-align: left;
+}
+
+.parent {
+  color: red;
+  font-size: 32px;
+  text-align: center;
+}
+
+/*
+ * Matches a .child that is anywhere within a .parent;
+ * note the difference between .parent.child (an element that has both the parent and child classes)
+ *                         and .parent .child (an element with the .child class inside a .parent)
+ */
+.parent .child {
+  border: 4px solid green;
+}
+
+/* Matches a .child that is a direct descendant of .parent */
+.parent > .child {
+  border: 4px solid yellow;
+}
